@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <title>zl's Pitaya</title>
+    <script src="./socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div id="loginbox" class="login-box">
+        <input type="text" class="form-control" id="username" placeholder="Your nickname">
+        <button type="button" class="btn btn-primary" onclick="CHAT.usernameSubmit();">Login</button>
+    </div>
+
+    <div id="chatbox" style="display:none;">
+        <div class="title">
+            <div class="title-content">
+                <span>zlsPitaya的多人聊天室（<span id="onlineCount"></span>）</span>
+                <span style="position:absolute;right:10px;"><span id="showusername"></span>&nbsp;|&nbsp;
+                <a href="javascript:;" onclick="CHAT.logout()" style="color:#fff;">退出</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div id="sendMsg" class="sendMsg">
+        <div id="message" class="message"></div>
+        <textarea id="content" class="sendMsg-box" maxlength="120"></textarea>
+        <button type="button" class="btn btn-success" onclick="CHAT.submit();" style="vertical-align: middle;">发送</button>
+    </div>
+    <script type="text/javascript" src="./client.js"></script>
+    <script type="text/javascript" src="./inputMsg.js"></script>
+    <script>
+        autoTextarea(document.getElementById("content"));
+        window.onresize = function() {
+            CHAT.setMH();
+        }
+    </script>
+</body>
+
+</html>

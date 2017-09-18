@@ -1,0 +1,200 @@
+body {
+    padding: 35px 0 45px 0;
+    background-color: #ebebeb;
+}
+
+.login-box {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.login-box input {
+    width: 65%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.login-box button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.title {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: #393a3f;
+    height: 28px;
+    font-size: 12px;
+    z-index: 2;
+}
+
+.title .title-content {
+    line-height: 28px;
+    color: #fff;
+    text-align: center;
+}
+
+.system {
+    margin: 10px;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.system .system-msg {
+    padding: 4px 12px;
+    background: #d4d4d4;
+    border-radius: 2px;
+}
+
+.sendMsg {
+    position: fixed;
+    width: 98%;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+    text-align: center;
+    display: none;
+    background-color: white;
+}
+
+.message {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0 5px 5px 5px;
+    border-bottom: 1px solid #e8e8e8;
+    background-color: #e8e8e8;
+    /*background-color: red;*/
+    z-index: 1;
+}
+
+.sendMsg-box {
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 auto;
+    width: 79%;
+    vertical-align: middle;
+    overflow-y: hidden;
+    font-size: 14px;
+    resize: none;
+    padding: 2px;
+    -webkit-box-sizing: content-box;
+    outline: 0 none;
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+.msg-item {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.self {
+    text-align: right;
+}
+
+.self-img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+}
+
+.triangle-self {
+    top: 10px;
+    right: 30px;
+    /*border-color: red red red #a0e75a;*/
+    border-color: #e8e8e8 #e8e8e8 #e8e8e8 #a0e75a;
+}
+
+.triangle-other {
+    top: 10px;
+    left: 30px;
+    /*border-color: red white red red;*/
+    border-color: #e8e8e8 white #e8e8e8 #e8e8e8;
+}
+
+.other {
+    text-align: left;
+}
+
+.other-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.self-msg {
+    font-size: 16px;
+    min-width: 35px;
+    max-width: 75%;
+    display: inline-block;
+    text-align: left;
+    word-wrap: break-word;
+    line-height: 40px;
+    margin-right: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #a0e75a;
+}
+
+.other-msg {
+    font-size: 16px;
+    min-width: 35px;
+    max-width: 75%;
+    display: inline-block;
+    text-align: left;
+    word-wrap: break-word;
+    line-height: 40px;
+    margin-left: 50px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+/*定義滾動條的樣式*/
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 5px;
+    background-color: #e8e8e8;
+}
+
+
+/*定义滚动条轨道 内阴影+圆角*/
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: #e8e8e8;
+}
+
+
+/*定义滑块 内阴影+圆角*/
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10%;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #e8e8e8;
+}
